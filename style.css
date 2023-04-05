@@ -1,0 +1,655 @@
+/* Great colors: */
+/* background-image: linear-gradient(to right bottom, #334155, #0f172a) */
+/* color: rgb(187, 148, 77); */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(to right bottom, #e5e5e5, #a8a29e);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 0.75rem;
+}
+header {
+  height: 35vh;
+  background-image: linear-gradient(to right bottom, #e2e8f0, #94a3b8b2),
+    url(hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  color: #334155;
+  padding: 6rem;
+  text-align: center;
+}
+
+.h2-intro {
+  font-size: 1.6rem;
+  margin: 1.6rem;
+  text-align: center;
+  padding: 2.5rem;
+  line-height: 1.85;
+}
+
+.section-skills {
+  text-align: center;
+}
+
+.h2-skills,
+.h2-contact-me {
+  font-size: 4.75rem;
+  font-weight: 700;
+  display: inline-block;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right bottom, #334155, #0f172a);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+  margin-bottom: -2rem;
+}
+.h2-skills:hover,
+.h2-contact-me:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.intro-box {
+  background-color: #d1d5dbe8;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s;
+  color: #0f172a;
+  margin-bottom: 4rem;
+}
+
+.intro-box::before {
+  content: "\201C"; /*css-tricks.com */
+  position: absolute;
+  top: -3.25rem;
+  left: -0.85rem;
+  line-height: 1;
+  font-size: 31rem;
+  color: #0f172a;
+  font-family: sans-serif;
+  z-index: -1;
+}
+
+h3 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+/* 2x2 grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.55);
+  margin: 0.85rem;
+  overflow: hidden;
+  /* width: 68rem; */
+  width: 96%;
+  background-color: #d1d5dbe8;
+  color: #0f172a;
+  transition: transform 0.3s;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
+.card img {
+  width: 100%;
+}
+.card p {
+  font-size: 1.55rem;
+  margin: 1.6rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+li:last-child {
+  margin-right: 0;
+}
+li img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.section-projects {
+  position: relative;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.heading-primary {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 1rem;
+}
+.heading-primary--1 {
+  display: block;
+  font-size: 5.9rem;
+  font-weight: 525;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.heading-primary--2 {
+  display: block;
+  font-size: 5.9rem;
+  font-weight: 525;
+  letter-spacing: 3.5rem;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.heading-primary--3 {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 750;
+  letter-spacing: 2rem;
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+li {
+  display: inline-block;
+  height: 7.5rem;
+  margin-right: 1.6rem;
+  margin-top: 0rem;
+}
+
+.svg {
+  color: #334155;
+  width: 5.5rem;
+}
+.svg:hover {
+  color: #171717;
+}
+footer {
+  background-color: #cbd5e1;
+  font-size: 1.2rem;
+  font-style: italic;
+  border-radius: 0.7rem;
+  height: 2.25rem;
+  text-align: center;
+}
+
+.section-contact {
+  position: relative;
+  height: 60rem;
+  text-align: center;
+}
+.right-chevron-1 {
+  position: absolute;
+  display: block;
+  background-image: linear-gradient(#fafaf9, #e7e5e4);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 25% 100%, 55% 50%, 25% 0);
+  height: 40rem;
+  width: 40rem;
+  top: 15rem;
+  left: -9rem;
+}
+.LinkedIn {
+  position: absolute;
+  height: 8.15rem;
+  width: 30.7rem;
+  text-align: left;
+  top: 15.5rem;
+  left: 21.5rem;
+}
+.Email {
+  position: absolute;
+  height: 8.15rem;
+  width: 27.95rem;
+  text-align: left;
+  top: 31rem;
+  left: 32.5rem;
+}
+.GitHub {
+  position: absolute;
+  height: 8.15rem;
+  width: 27.7rem;
+  text-align: left;
+  top: 47.5rem;
+  left: 21.5rem;
+}
+.svg-2 {
+  position: absolute;
+  width: 5.85rem;
+  height: 5.85rem;
+  left: 2.25rem;
+  color: #3f3f46;
+  z-index: 1;
+}
+
+.LinkedIn-svg {
+  top: 0.75rem;
+}
+.Email-svg {
+  top: 0.75rem;
+}
+.GitHub-svg {
+  top: 0.875rem;
+}
+.contact-links {
+  position: absolute;
+  font-size: 1.4rem;
+  color: #27272a;
+  width: 30rem;
+  left: 9.45rem;
+  top: 0.5rem;
+  z-index: 1;
+}
+.contact-links-LinkedIn {
+  position: absolute;
+  font-size: 1.4rem;
+  color: #27272a;
+  width: 30rem;
+  left: 9.45rem;
+  top: 1.65rem;
+  z-index: 100;
+}
+.email-address {
+  top: 1.15rem;
+}
+.GitHub-address {
+  top: 1.15rem;
+}
+.LinkedIn::before,
+.LinkedIn::after,
+.Email::before,
+.Email::after,
+.GitHub::before,
+.GitHub::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+.LinkedIn:before,
+.Email::before,
+.GitHub::before {
+  height: 100%;
+  width: 0;
+  right: 0;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: all 500ms cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+.LinkedIn:after,
+.Email::after,
+.GitHub::after {
+  background-color: transparent;
+  height: calc(100% - 4px);
+  width: 0;
+  left: 0;
+  transition: all 1s cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+.LinkedIn:hover:before,
+.Email:hover:before,
+.GitHub:hover:before {
+  width: 100%;
+}
+.LinkedIn:hover:after,
+.Email:hover:after,
+.GitHub:hover:after {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 0.385rem;
+}
+
+.bottom-content {
+  position: absolute;
+  /* top: 1.5rem;
+  left: 40rem; */
+  left: 50%;
+  top: 20%;
+  margin-left: -29.5rem;
+  margin-top: -10rem;
+}
+/* 900px */
+@media only screen and (max-width: 56.25em) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* 700px */
+@media only screen and (max-width: 43.75em) {
+  header {
+    padding: 0rem;
+  }
+  .heading-primary--1 {
+    font-size: 5.25rem;
+  }
+  .heading-primary--2 {
+    font-size: 5.25rem;
+  }
+  .heading-primary--3 {
+    font-size: 1.75rem;
+  }
+  .h2-intro {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    text-align: center;
+    padding: 2.4rem;
+    line-height: 1.85;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .card p {
+    font-size: 1.5rem;
+    margin: 1.6rem;
+  }
+  .bottom-content {
+    transform: scale(0.9);
+    left: 53%;
+    top: 20%;
+    margin-left: -29.5rem;
+    margin-top: -10rem;
+  }
+}
+/* 550px */
+@media only screen and (max-width: 34.375em) {
+  .heading-primary--1 {
+    font-size: 4rem;
+  }
+  .heading-primary--2 {
+    font-size: 4rem;
+  }
+  .heading-primary--3 {
+    font-size: 1.4rem;
+  }
+  .h2-intro {
+    font-size: 1.4rem;
+    margin: 1.5rem;
+    text-align: center;
+    padding: 1.5rem;
+    line-height: 1.85;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .card p {
+    font-size: 1.4rem;
+    margin: 1.25rem;
+  }
+  .bottom-content {
+    transform: scale(0.9);
+    left: 53%;
+    top: 20%;
+    margin-left: -29.5rem;
+    margin-top: -10rem;
+  }
+
+  .h2-skills,
+  .h2-contact-me {
+    font-size: 4.25rem;
+  }
+  .h2-contact-me {
+    margin-top: 5.5rem;
+  }
+
+  .svg {
+    width: 5.15rem;
+  }
+
+  .section-contact {
+    height: 50rem;
+  }
+  .right-chevron-1 {
+    height: 0rem;
+  }
+  .LinkedIn {
+    top: 15.5rem;
+    left: 16.25rem;
+  }
+  .Email {
+    top: 29.5rem;
+    left: 16.25rem;
+  }
+  .GitHub {
+    top: 43.5rem;
+    left: 16.25rem;
+  }
+}
+/* 450px */
+@media only screen and (max-width: 28.125em) {
+  header {
+    height: 25vh;
+  }
+  .heading-primary--1 {
+    font-size: 2.75rem;
+    font-weight: 500;
+    letter-spacing: 2.75rem;
+  }
+  .heading-primary--2 {
+    font-size: 2.75rem;
+    font-weight: 500;
+    letter-spacing: 2.75rem;
+  }
+  .heading-primary--3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 1.75rem;
+  }
+  .h2-intro {
+    font-size: 1.2rem;
+    margin: 1.4rem;
+    padding: 1.4rem;
+    line-height: 1.65;
+  }
+  .intro-box {
+    box-shadow: 0 1.3rem 2.5rem rgba(0, 0, 0, 0.55);
+    margin-bottom: 2.75rem;
+  }
+
+  .intro-box::before {
+    top: -2.6rem;
+    left: -0.75rem;
+    font-size: 25rem;
+  }
+  .card {
+    box-shadow: 0 1.3rem 2.5rem rgba(0, 0, 0, 0.55);
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .card p {
+    font-size: 1.3rem;
+    margin: 1.15rem;
+  }
+
+  .h2-skills,
+  .h2-contact-me {
+    font-size: 3.85rem;
+  }
+  .h2-contact-me {
+    margin-top: 5.5rem;
+  }
+
+  .svg {
+    width: 4.5rem;
+  }
+
+  li {
+    margin-right: 1rem;
+  }
+  li img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .section-contact {
+    height: 50rem;
+  }
+  .bottom-content {
+    transform: scale(0.8);
+  }
+  .LinkedIn,
+  .Email,
+  .GitHub {
+    left: 19.25rem;
+  }
+}
+/* 350px */
+@media only screen and (max-width: 21.875em) {
+  header {
+    height: 22vh;
+  }
+  .heading-primary--1 {
+    font-size: 2.6rem;
+    font-weight: 475;
+    letter-spacing: 2.1rem;
+  }
+  .heading-primary--2 {
+    font-size: 2.6rem;
+    font-weight: 475;
+    letter-spacing: 2.1rem;
+  }
+  .heading-primary--3 {
+    font-size: 0.95rem;
+    font-weight: 575;
+    letter-spacing: 1.5rem;
+  }
+
+  .h2-intro {
+    font-size: 1.125rem;
+    margin: 1.38rem;
+    padding: 1.38rem;
+    line-height: 1.65;
+  }
+  .intro-box {
+    box-shadow: 0 1.25rem 2.25rem rgba(0, 0, 0, 0.55);
+    margin-bottom: 2.7rem;
+  }
+
+  .intro-box::before {
+    top: -2.62rem;
+    left: -0.77rem;
+    font-size: 24rem;
+  }
+  .card {
+    box-shadow: 0 1.25rem 2.25rem rgba(0, 0, 0, 0.55);
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  .card p {
+    font-size: 1.25rem;
+    margin: 1.1rem;
+  }
+
+  .h2-skills,
+  .h2-contact-me {
+    font-size: 3.6rem;
+  }
+  .h2-contact-me {
+    margin-top: 5.35rem;
+  }
+  .svg {
+    width: 4.3rem;
+  }
+
+  li {
+    margin-right: 0.75rem;
+  }
+  li img {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+  .section-contact {
+    height: 40rem;
+  }
+  .bottom-content {
+    transform: scale(0.78);
+  }
+  .LinkedIn {
+    top: 18.5rem;
+    left: 21rem;
+  }
+  .Email {
+    top: 30rem;
+    left: 21rem;
+  }
+  .GitHub {
+    top: 41.5rem;
+    left: 21rem;
+  }
+}
